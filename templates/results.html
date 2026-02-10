@@ -1,0 +1,22 @@
+<h1>Available Caterers</h1>
+
+{% for vendor in vendors %}
+<div style="border:1px solid #ccc; padding:15px; margin:15px;">
+    
+    {% if vendor.image %}
+        <img src="{{ url_for('static', filename='uploads/' + vendor.image) }}" width="250">
+    {% endif %}
+
+    <h2>{{ vendor.name }}</h2>
+    <p>📍 {{ vendor.location }}</p>
+    <p>👥 Pax: {{ vendor.min_pax }} - {{ vendor.max_pax }}</p>
+    <p>💰 RM {{ vendor.price_per_pax }} / pax</p>
+
+    <a href="https://wa.me/{{ vendor.whatsapp }}" target="_blank">
+        <button>WhatsApp Vendor</button>
+    </a>
+
+</div>
+{% else %}
+<p>No vendors found.</p>
+{% endfor %}

@@ -1,0 +1,13 @@
+<h2>Welcome, {{ vendor.name }}</h2>
+<p>Location: {{ vendor.location }}</p>
+<p>Pax: {{ vendor.min_pax }} - {{ vendor.max_pax }}</p>
+<p>Price per pax: RM {{ vendor.price_per_pax }}</p>
+<p>WhatsApp: {{ vendor.whatsapp }}</p>
+
+{% if vendor.image %}
+<p>Menu / Food Image:</p>
+<img src="{{ url_for('static', filename='uploads/' + vendor.image) }}" width="300">
+{% endif %}
+
+<p><a href="/vendor/upload">Upload Menu / Image</a></p>
+<p><a href="/vendor/logout">Logout</a></p>

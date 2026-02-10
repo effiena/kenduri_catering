@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import sqlite3
 import os
 from flask import Flask, render_template, request, redirect, session, url_for
@@ -134,7 +134,7 @@ def vendor_logout():
 
 if __name__ == "__main__":
     app.run(debug=True)
-=======
+
 import sqlite3
 import os
 from flask import Flask, render_template, request, redirect, session, url_for
@@ -271,4 +271,4 @@ def vendor_logout():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
->>>>>>> 4f9d69a78090eb14aa5ade15d3544f9c9c31d0aa
+
